@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance System</title>
+    <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #4CAF50; /* Green background color */
+}
+
+#login-container {
+    width: 300px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#login-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+#login-form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+#login-form button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#login-form button:hover {
+    background-color: #45a049;
+}
+
+#dashboard {
+    width: 80%;
+    margin: 20px auto;
+}
+
+#attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#attendance-table th, #attendance-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#attendance-table th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  </style>
+</head>
+<body>
+    <div id="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+            <p id="login-error" style="color: red; display: none;">Invalid credentials</p>
+        </form>
+    </div>
+    <div id="dashboard" style="display: none;">
+        <h2>Student Attendance Dashboard</h2>
+        <table id="attendance-table">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Days Present</th>
+                    <th>Attendance Percentage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be inserted by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+  </html>
